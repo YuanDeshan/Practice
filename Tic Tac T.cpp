@@ -2,6 +2,8 @@
 #include <graphics.h>
 #include <stdlib.h>
 #include <time.h>
+#include<windows.h>
+#include<Mmsystem.h>
 #pragma comment(lib,"Winmm.lib")
 #define PIX 100
 #define MAX_ROW 3
@@ -31,7 +33,6 @@ void DrawMap(){
 			case 11:
 			case 12:
 				putimage(j *  PIX, i *  PIX, &img[1]);
-				PlaySound(TEXT("P\3.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
 				Winner();
 				break;
 			case 20:
@@ -51,6 +52,7 @@ void Game(){
 		MOUSEMSG msg = { 0 };//定义一个鼠标消息
 		msg = GetMouseMsg();//获取鼠标消息
 		if (msg.uMsg == WM_LBUTTONDOWN&&arr[msg.y / PIX][msg.x / PIX] < MAX_ROW){
+			PlaySound(TEXT("D:\\3.wav"), NULL, SND_FILENAME | SND_ASYNC);
 			arr[msg.y / PIX][msg.x / PIX] += 10;
 			++hitnum;
 		}
@@ -66,9 +68,9 @@ void Game(){
 			++hitnum;
 		}
 	}
-}
-void Winner(){
-	if (hitnum >= 6){
+}void Winner(){
+	
+		//判断所有行是否连成一条线
 		for (int row = 0; row < MAX_ROW; ++row){
 			if (arr[row][0] >= 10 && arr[row][0] <= 12 &&
 				arr[row][1] >= 10 && arr[row][1] <= 12 &&
@@ -76,6 +78,7 @@ void Winner(){
 				flag = 1;
 			}
 		}
+		//判断所有列是否连成一条线
 		for (int col = 0; col < MAX_COL; ++col){
 			if (arr[0][col] >= 10 && arr[0][col] <= 12 &&
 				arr[1][col] >= 10 && arr[1][col] <= 12 &&
@@ -83,6 +86,7 @@ void Winner(){
 				flag = 1;
 			}
 		}
+		//判断对角线是否连成一行
 		if (arr[0][0] >= 10 && arr[0][0] <= 12 &&
 			arr[1][1] >= 10 && arr[1][1] <= 12 &&
 			arr[2][2] >= 10 && arr[2][2] <= 12){
@@ -93,31 +97,57 @@ void Winner(){
 			arr[2][0] >= 10 && arr[2][0] <= 12){
 			flag = 1;
 		}
-		else {
+		for (int row = 0; row < MAX_ROW; ++row){
+			if (arr[row][0] >= 20 && arr[row][0] <= 22 &&
+				arr[row][1] >= 20 && arr[row][1] <= 22 &&
+				arr[row][2] >= 20 && arr[row][2] <= 22){
+				flag = 0;
+			}
+		}
+		for (int col = 0; col < MAX_COL; ++col){
+			if (arr[0][col] >= 20 && arr[0][col] <= 22 &&
+				arr[1][col] >= 20 && arr[1][col] <= 22 &&
+				arr[2][col] >= 20 && arr[2][col] <= 22){
+				flag = 0;
+			}
+		}
+		if (arr[0][0] >= 20 && arr[0][0] <= 22 &&
+			arr[1][1] >= 20 && arr[1][1] <= 22 &&
+			arr[2][2] >= 20 && arr[2][2] <= 22){
 			flag = 0;
 		}
-	}
+		if (arr[0][2] >= 20 && arr[0][2] <= 22 &&
+			arr[1][1] >= 20 && arr[1][1] <= 22 &&
+			arr[2][0] >= 20 && arr[2][0] <= 22){
+			flag = 0;
+		}
 }
 int main(){
 	HWND hwnd = GetHWnd();//获得窗口句柄
 	initgraph(PIX * MAX_ROW, PIX * MAX_COL);
 	InitMap();
-	while (1){
-		DrawMap();
-		 Game();
-		 if (hitnum == 9){
-			 MessageBox(hwnd, _T("你和电脑打平了!"), _T(""), MB_OK);
-			 break;
-		 }
-		 if (flag==1){
-			 MessageBox(hwnd, _T("恭喜你取得了胜利!"), _T(""), MB_OK);
-			 break;
-		 }
-		 else if(flag==0){
-			 MessageBox(hwnd, _T("连电脑都下不过,真菜!"), _T(""), MB_OK);
-			 break;
-		 }
-	}
+	//while (1){
+		while (1){
+			DrawMap();
+			Game();
+			if (flag == 1){
+				MessageBox(hwnd, _T("恭喜你取得了胜利!"), _T(""), MB_OK);
+				break;
+			}
+			else if (flag == 0){
+				MessageBox(hwnd, _T("连电脑都下不过,真菜!"), _T(""), MB_OK);
+				break;
+			}
+			if (hitnum == 9){
+				MessageBox(hwnd, _T("你和电脑打平了!"), _T(""), MB_OK);
+				break;
+			}
+		}
+		/*int ret = MessageBox(hwnd, TEXT("再来一局？"), _T(""), MB_YESNO | MB_ICONQUESTION);
+		if (ret == IDYES){
+		break;
+		}*/
+	//}
 	system("pause");
 	return 0;
 }
