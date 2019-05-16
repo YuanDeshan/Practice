@@ -4,6 +4,7 @@
 #include <stdio.h>
 
 
+
 void DListInit(PDLNode* pHead)
 {
 	assert(pHead);
@@ -117,7 +118,7 @@ void DListDestroy(PDLNode* pHead)
 	*pHead = NULL;
 }
 
-
+void
 void TestDList()
 {
 	PDLNode pHead = NULL;
