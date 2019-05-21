@@ -45,6 +45,6 @@ void StackTest(){
 }
 
 int main(){
-
+	StackTest();
 	return 0;
 }
