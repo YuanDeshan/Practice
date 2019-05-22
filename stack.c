@@ -10,7 +10,7 @@ typedef struct Stack{
 	int capacity;//»›¡ø
 }Stack;
 
-//
+//’ª≥ı ºªØ
 void StackInit(Stack* ps){
 
 }
