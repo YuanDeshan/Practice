@@ -15,6 +15,7 @@ void StackInit(Stack* ps){
 
 }
 
+//ѹջ
 void StackPush(Stack* ps,STDatatype data){
 
 }
