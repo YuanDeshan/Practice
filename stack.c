@@ -30,10 +30,12 @@ STDatatype StackTop(Stack* ps){
 
 }
 
+//求栈有效元素个数
 int StackSize(Stack* ps){
 
 }
 
+//段栈是否为空
 int StackEmpty(Stack* ps){
 
 }
