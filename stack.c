@@ -40,6 +40,7 @@ int StackEmpty(Stack* ps){
 
 }
 
+//Ïú»ÙÕ»
 void StackDestroy(Stack* ps){
 
 }
