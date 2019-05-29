@@ -12,7 +12,7 @@ typedef struct Stack{
 
 //’ª≥ı ºªØ
 void StackInit(Stack* ps){
-
+	assert(ps);
 }
 
 //—π’ª
