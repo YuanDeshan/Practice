@@ -17,7 +17,7 @@ void StackInit(Stack* ps){
 
 //Ñ¹Õ»
 void StackPush(Stack* ps,STDatatype data){
-
+	assert(ps);
 }
 
 //³öÕ»
