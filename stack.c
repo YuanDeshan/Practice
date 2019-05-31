@@ -22,7 +22,7 @@ void StackPush(Stack* ps,STDatatype data){
 
 //³öÕ»
 void StackPop(Stack* ps){
-
+	assert(ps);
 }
 
 //Õ»¶¥
