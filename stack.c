@@ -37,7 +37,7 @@ int StackSize(Stack* ps){
 
 //¶ÎÕ»ÊÇ·ñÎª¿Õ
 int StackEmpty(Stack* ps){
-
+	asser(ps);
 }
 
 //Ïú»ÙÕ»
