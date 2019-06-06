@@ -37,12 +37,12 @@ int StackSize(Stack* ps){
 
 //¶ÎÕ»ÊÇ·ñÎª¿Õ
 int StackEmpty(Stack* ps){
-	asser(ps);
+	assert(ps);
 }
 
 //Ïú»ÙÕ»
 void StackDestroy(Stack* ps){
-
+	assert(ps);
 }
 
 //²âÊÔ
