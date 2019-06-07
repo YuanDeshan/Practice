@@ -47,7 +47,7 @@ void StackDestroy(Stack* ps){
 
 //≤‚ ‘
 void StackTest(){
-
+	assert(ps);
 
 }
 
