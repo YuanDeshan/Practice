@@ -47,11 +47,12 @@ void StackDestroy(Stack* ps){
 
 //≤‚ ‘
 void StackTest(){
-	assert(ps);
+	
 
 }
 
 int main(){
+	
 	StackTest();
 	return 0;
 }
