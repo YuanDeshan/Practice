@@ -13,7 +13,7 @@ typedef struct Stack{
 //’ª≥ı ºªØ
 void StackInit(Stack* ps){
 	assert(ps);
-	Stack* p=malloc(sizeof(STDatatype))
+	Stack* p=(Satck*)malloc(sizeof(STDatatype))
 	
 }
 
