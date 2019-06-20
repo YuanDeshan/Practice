@@ -45,6 +45,7 @@ int main(){
 }
 #endif
 
+#if 0
 void Test(){
 	int a=1024;
 	int& ra = a;
@@ -56,6 +57,7 @@ int main(){
 	Test();
 	return 0;
 }
+#endif
 
 
 
