@@ -16,6 +16,7 @@ void StackInit(Stack* ps){
 	Stack* p=(Satck*)malloc(sizeof(STDatatype));
 	if(p==null){
 		assert(0);
+		return £»
 	}
 	
 }
