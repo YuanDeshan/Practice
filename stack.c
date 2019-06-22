@@ -24,6 +24,7 @@ void StackInit(Stack* ps){
 //ันีป
 void StackPush(Stack* ps,STDatatype data){
 	assert(ps);
+	ps->arr[size]=data;
 }
 
 //ณ๖ีป
