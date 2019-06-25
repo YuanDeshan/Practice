@@ -40,7 +40,7 @@ STDatatype StackTop(Stack* ps){
 //求栈有效元素个数
 int StackSize(Stack* ps){
 	assert(ps);
-	return ps->size
+	return ps->size；
 }
 
 //段栈是否为空
