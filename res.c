@@ -8,7 +8,7 @@ int main(){
 		printf("%d", n%10);
 		n /= 10;
 	}
-	putchar('\n');
+	
 	system("pause");
 	return 0;
 }
