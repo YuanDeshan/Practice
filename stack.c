@@ -35,7 +35,7 @@ void StackPop(Stack* ps){
 //栈顶
 STDatatype StackTop(Stack* ps){
 	assert(ps);
-	return
+	return  ps
 }
 
 //求栈有效元素个数
