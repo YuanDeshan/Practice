@@ -10,7 +10,7 @@ typedef struct SeqList{
 	DataType* array;//定义一个整形指针变量
 	int capacity;//顺序表的总大小
 	int size;//顺序表中有效元素的个数
-}SeqList, *PSeq;
+}SeqList, *PSeq
 
 //顺序表初始化
 void SeqListInit(PSeq ps,int capacity){
