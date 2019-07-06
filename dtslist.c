@@ -20,7 +20,7 @@ void SeqListInit(PSeq ps,int capacity){
 		return;
 	}
 	ps->capacity = capacity;
-	ps->size = 0;
+	ps->size = 0
 }
 
 //Ë³Ðò±íÎ²²å
