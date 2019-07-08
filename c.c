@@ -3,7 +3,7 @@
 int main(){
 	
 	int I;
-	double bonus;
+	
 	printf("请输入你的工资:\n");
 	scanf("%d", &I);
 	if (I <= 100000){
