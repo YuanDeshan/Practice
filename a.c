@@ -10,7 +10,7 @@ void mul(int row ){
 int main(){							//定义主函数
 	int row;
 	printf("请输入行数:\n");
-	scanf("%d", &row);
+	scanf("%d", &row)；
 	mul(row);
 	return 0;						//函数返回值为0
 }
