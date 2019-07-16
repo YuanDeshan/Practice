@@ -49,6 +49,10 @@ void Menu(){
 	scanf("%d", &choice);
 }
 
+void InitPerson(){
+	
+}
+
 int main(){
 	Menu();
 	system("pause");
