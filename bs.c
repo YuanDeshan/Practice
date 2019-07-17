@@ -1,5 +1,5 @@
 #include <stdio.h>
-int mainz(){
+int main(){
 	int max();
 	extern int A, B, C;
 	printf("Please enter three integer numbers:");
