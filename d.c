@@ -13,7 +13,7 @@ int find(int arr[],int left,int right,int a){
 			return mid;
 		}
 	}
-	return -1;
+	return -2;
 }
 int main(){	
 	int f,z;
