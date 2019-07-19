@@ -2,7 +2,7 @@
 #include <stdio.h>					//编译预处理命令
 int main(){
 	
-	int I;
+	int I，j;
 	
 	printf("请输入你的工资:\n");
 	scanf("%d", &I);
