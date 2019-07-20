@@ -19,6 +19,6 @@ int main(){
 	scanf("%d", &money);
 	num = water_bottle(money);
 	printf("¿ÉÒÔºÈ%dÆ¿ÆûË®!\n", num);
-	system("pause");
+	
 	return 0;
 }
