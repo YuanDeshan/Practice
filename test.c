@@ -54,7 +54,7 @@ int main()
 }
 #endif
 
-
+#if 0
 int main()
 {
 	int i = 1;
@@ -66,3 +66,4 @@ int main()
 
 	return 0;
 }
+#endif
