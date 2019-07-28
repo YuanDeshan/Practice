@@ -27,3 +27,32 @@ int  main(){
 	cout << fun(month) << endl;
 	return 0;
 }
+
+#if 0
+void Print_Arr1(int arr[], int sz)
+{
+	for (int i = 0; i < sz; ++i)
+	{
+		printf("%d\n", arr[i]);
+	}
+}
+
+void Print_Arr2(int* arr, int sz)
+{
+	for (int i = 0; i < sz; ++i)
+	{
+		printf("%d\n", arr[i]);
+	}
+
+}
+
+
+int main()
+{
+	int arr[5] = { 1, 2, 3, 4, 5 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	Print_Arr1(arr, sz);
+	Print_Arr2(arr, sz);
+	return 0;
+}
+#endif
