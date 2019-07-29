@@ -46,6 +46,7 @@ void Print_Arr2(int* arr, int sz)
 
 }
 
+void
 
 int main()
 {
@@ -53,6 +54,9 @@ int main()
 	int sz = sizeof(arr) / sizeof(arr[0]);
 	Print_Arr1(arr, sz);
 	Print_Arr2(arr, sz);
+	
+	
+	
 	return 0;
 }
 #endif
