@@ -59,4 +59,13 @@ int main()
 	
 	return 0;
 }
+
+int main()
+{
+	char str[] = "hehe";
+	int lenth = strlen(str);
+	printf("%d\n", lenth);
+	return 0;
+}
+
 #endif
