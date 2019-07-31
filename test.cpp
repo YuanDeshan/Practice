@@ -69,3 +69,40 @@ int main()
 }
 
 #endif
+
+
+#if 0
+int main()
+{
+
+	char str1[20] = "hehe";
+	char str2[] = "haha";
+	printf("%d\n", strcmp(str1, str2));
+	return 0;
+}
+#endif
+
+int My_Strcmp(const char* str1, const char* str2)
+{
+	assert(str1 != NULL);
+	assert(str2 != NULL);
+	int ret = 0;
+	//先将2个字符串中字符转为无符号
+	//str1-str2每个字符依次相减如果相等，结果为0，
+	//则对结果取反，让条件为真，继续下一个字符的比较
+	//直到将str1字符全部比较完
+	while (!(ret=*(unsigned char*)str1-*(unsigned char*)str2)&&*str1)
+	{
+		++str1;
+		++str2;
+	}
+	if (ret > 0)
+	{
+		ret = 1;
+	}
+	else if (ret < 0)
+	{
+		ret = -1;
+	}
+	return ret;
+}
