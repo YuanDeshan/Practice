@@ -106,3 +106,64 @@ int My_Strcmp(const char* str1, const char* str2)
 	}
 	return ret;
 }
+#if 0
+int main()
+{
+	int *p = (int*)calloc(10,sizeof(int));
+	if (p == NULL)
+	{
+		assert(0);
+		return NULL;
+	}
+	int* ptr = NULL;
+	 ptr = (int*)realloc(p, 20);
+	if (p != NULL)
+	{
+		p = ptr;
+	}
+	for (int i = 0; i < 20; ++i)
+	{
+		printf("%d ", p[i]);
+	}
+
+	free(ptr);
+	return 0;
+
+}
+#endif
+
+#if 0
+#include <iostream>
+using namespace std;
+
+const double PI = 3.14;
+int Into_the_bowl(int lenth, int r)
+{
+	double L = 2 * PI*r;
+	if (lenth > ((int)L))
+	{
+		return 0;
+	}
+	else
+	{
+		return 1;
+	}
+
+}
+
+int main()
+{
+	int lenth, r;
+	cin >> lenth >> r;
+	int ret = Into_the_bowl(lenth, r);
+	if (ret == 0)
+	{
+		cout << "No" << endl;
+	}
+	else
+	{
+		cout << "Yes" << endl;
+	}
+	return 0;
+}
+#endif
