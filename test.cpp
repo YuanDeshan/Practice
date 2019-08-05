@@ -151,20 +151,3 @@ int Into_the_bowl(int lenth, int r)
 
 }
 
-int main()
-{
-	int lenth, r;
-	cin >> lenth >> r;
-	int ret = Into_the_bowl(lenth, r);
-	if (ret == 0)
-	{
-		cout << "No" << endl;
-	}
-	else
-	{
-		cout << "Yes" << endl;
-	}
-	return 0;
-}
-#endif
-
