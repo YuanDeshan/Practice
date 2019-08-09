@@ -133,21 +133,5 @@ int main()
 #endif
 
 
-#include <iostream>
-using namespace std;
 
-const double PI = 3.14;
-int Into_the_bowl(int lenth, int r)
-{
-	double L = 2 * PI*r;
-	if (lenth > ((int)L))
-	{
-		return 0;
-	}
-	else
-	{
-		return 1;
-	}
-
-}
 
