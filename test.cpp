@@ -132,7 +132,36 @@ int main()
 }
 #endif
 
-#if 0
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	int num = 0, new_num = 0, old_num = 0;
+	int N;
+	cin >> N;
+	if (N == 1){
+		num = 1;
+	}
+	else if (N == 2)
+	{
+		num = 2;
+		
+	}
+	else
+	{
+		old_num = 2;
+		for (int i = 2; i < N; ++i)
+		{
+			num = old_num * 2;
+			old_num = num;
+		}
+
+	}
+	cout << num << endl;
+	return 0;
+}
 
 
 
