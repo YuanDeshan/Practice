@@ -164,8 +164,12 @@ int main()
 }
 
 #if 0
+#incldue <iostream>
+using namespace std;
+
 int main()
 {
+	
 	return 0;
 }
 
