@@ -2,9 +2,10 @@
 #include <stdio.h>
 int main(){
 	
-	printf("=============================\n");
+	int array[10]={1,2};
+	char* p="hello";
 	
-
+	printf("%d %d\n",sizeof(array),sizeof(p));
 	system("pause");
 	return 0;
 }
