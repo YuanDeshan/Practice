@@ -1,5 +1,5 @@
 #include <stdio.h>								
-int find(int arr[],int left,int right,int a){
+int find(int* arr,int left,int right,int a){
 	int mid = 0;
 	while (left <= right){
 		mid = (left + right) / 2;
